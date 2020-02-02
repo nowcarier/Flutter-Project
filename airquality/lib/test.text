@@ -1,0 +1,67 @@
+if (snapshot.hasData) {
+                                  var myint = int.parse(
+                                      snapshot.data.stations[2]['LastUpdate']
+                                          ['PM25']['value']);
+                                  Widget _getColor() {
+                                    if (myint <= 25) {
+                                      return Text(
+                                        (snapshot
+                                            .data
+                                            .stations[2]['LastUpdate']['PM25']
+                                                ['value']
+                                            .toString()),
+                                        style: TextStyle(
+                                            fontSize: 100,
+                                            color: Colors.blue,
+                                            fontWeight: FontWeight.bold),
+                                      );
+                                    } else if (myint <= 50) {
+                                      return Text(
+                                        (snapshot
+                                            .data
+                                            .stations[2]['LastUpdate']['PM25']
+                                                ['value']
+                                            .toString()),
+                                        style: TextStyle(
+                                            fontSize: 100,
+                                            color: Colors.green[300],
+                                            fontWeight: FontWeight.bold),
+                                      );
+                                    } else if (myint <= 1000) {
+                                      return Text(
+                                        (snapshot
+                                            .data
+                                            .stations[2]['LastUpdate']['PM25']
+                                                ['value']
+                                            .toString()),
+                                        style: TextStyle(
+                                            fontSize: 100,
+                                            color: Colors.yellow,
+                                            fontWeight: FontWeight.bold),
+                                      );
+                                    } else if (myint <= 200) {
+                                      return Text(
+                                        (snapshot
+                                            .data
+                                            .stations[2]['LastUpdate']['PM25']
+                                                ['value']
+                                            .toString()),
+                                        style: TextStyle(
+                                            fontSize: 100,
+                                            color: Colors.orange,
+                                            fontWeight: FontWeight.bold),
+                                      );
+                                    } else if (myint > 200) {
+                                      return Text(
+                                        (snapshot
+                                            .data
+                                            .stations[2]['LastUpdate']['PM25']
+                                                ['value']
+                                            .toString()),
+                                        style: TextStyle(
+                                            fontSize: 100,
+                                            color: Colors.red,
+                                            fontWeight: FontWeight.bold),
+                                      );
+                                    }
+                                  }
